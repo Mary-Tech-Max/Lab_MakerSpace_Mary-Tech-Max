@@ -1,5 +1,5 @@
 """
-database.py - the only file that talks to SQLite directly.
+database.py is the only file that talks to SQLite directly.
 
 Everything else in the project asks this module for rows and never opens a
 connection itself. That keeps SQL in one place and makes it easy to explain
@@ -9,7 +9,7 @@ during the demo: "models hold behaviour, database.py holds storage".
 import sqlite3
 from contextlib import contextmanager
 
-# The schema is created on first run, so the repo needs no separate .sql step.
+# The schema is created on first run, so the repository needs no separate .sql step.
 # Three core tables + a small `categories` lookup so category names are stored
 # once instead of being repeated on every equipment row (normalisation).
 SCHEMA = """
