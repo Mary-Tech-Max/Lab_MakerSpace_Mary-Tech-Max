@@ -120,7 +120,7 @@ def update_member(ms):
 
 def delete_member(ms):
     m = ms.get_member(ask_int("Member ID to delete"))
-    if ask_yes_no(f"Really delete {m.name}?"):
+    if ask_yes_no(f"Are you sure you want to delete {m.name}?"):
         ms.delete_member(m.id)
         print("  - Member deleted.")
 
@@ -148,7 +148,7 @@ def update_equipment(ms):
 
 def delete_equipment(ms):
     item = ms.get_equipment(ask_int("Equipment ID to delete"))
-    if ask_yes_no(f"Really delete {item.name}?"):
+    if ask_yes_no(f"Are you sure you want to delete {item.name}?"):
         ms.delete_equipment(item.id)
         print("  - Equipment deleted.")
 
@@ -319,7 +319,7 @@ def main():
         print()
     finally:
         ms.db.close()
-        print("Goodbye - happy making!")
+        print("Goodbye, it was lovely to have you! looking forward to seeing you again!")
 
 
 if __name__ == "__main__":
